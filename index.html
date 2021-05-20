@@ -1,0 +1,47 @@
+<!-- BEM방식이란?
+- 수정을 하는 스타일일 경우 --를 이용해 클래스 명을 지정하지만 평범한 클래스 명은__를 이용한다. 
+- ex-common) btn이라는 클래스가 존재.
+  ex-modify)btn--big
+  ex-connect)btn__text -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Welcome To Cocoa Talk</title>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>11%</span>
+            <i class="fas fa-battery-quarter fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">Welecome to Cocoa Clone</h1>
+        <p class="welcome-header__text">
+            If you have a Cocoa Account, log in with your email or phone number.
+        </p>
+    </header>
+
+    <form class="login-form" action="friends.html" method="GET">
+        <input name="username" type="text" placeholder="Email or phone number" />
+        <input name="password" type="password" placeholder="Password"/>
+        <input type="submit" class="login-form__login" value="Log In"/>
+        <a class="login-form__findAccount" href="#">Find Cocoa Account or Password</a>
+    </form>
+
+    <script src="https://kit.fontawesome.com/434a226fe5.js" crossorigin="anonymous"></script>
+</body>
+</html>

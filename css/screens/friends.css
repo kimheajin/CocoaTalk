@@ -1,0 +1,19 @@
+.message-display {
+  text-align: center;
+  padding: 10px 0px;
+  background-color: rgba(196, 196, 196, 0.3);
+}
+
+.message-display span {
+  padding-right: 5px;
+}
+
+.message-display i {
+  align-items: center;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.message-display__msg {
+  font-size: 15px;
+  align-items: center;
+}
