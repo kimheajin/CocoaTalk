@@ -1,19 +1,31 @@
-.message-display {
+#friends-display-link {
   text-align: center;
+  display: block;
+  width: 100%;
+  background-color: #fafafa;
   padding: 10px 0px;
-  background-color: rgba(196, 196, 196, 0.3);
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: -10px;
 }
 
-.message-display span {
-  padding-right: 5px;
-}
-
-.message-display i {
-  align-items: center;
+#friends-display-link i {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.message-display__msg {
-  font-size: 15px;
-  align-items: center;
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.5);
 }
