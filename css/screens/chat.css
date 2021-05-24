@@ -2,3 +2,164 @@
 .chat-bar {
   background-color: #abc1d1;
 }
+
+#chat-screen .alt-header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-chat {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* z-index는 절대적인 위치나 고정된 위치에 대해서 설정할 수 있다.
+ex) 서로 같은 아이디의 안에 A, B, C가 있다고 가정한다.
+    A와B에는 font-size를 20을 주고, C에는 10을 줘야한다면 font-size:10과 z-index:3을 설정하여 C에 10을 주는것이 가능하다. 
+    default값은 0. 숫자가 작을수록 낮은 layer, 클수록 위의 layer fixed, absolute position에 이용 가능.*/
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 15px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 13px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 10px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+/* 시간과 말풍선 위치를 바꾸는 방법
+1)
+.message-row--own .message__time {
+order: 0;
+margin-right: 5px;
+}
+.message-row--own .message__bubble {
+order: 1;
+margin-right: 0px;
+}
+
+flex children에게 사용할 수 있다. 자식 수가 많으면 어렵다.
+
+2) 간단하고 쿨한방법
+.message-row--own .message__info {
+flex-direction: row-reverse;
+}
+ */
+
+.reply {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.reply i {
+  opacity: 0.8;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply input {
+  padding: 15px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: -3px;
+  top: 2px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+.reply__column button i {
+  opacity: 1;
+}
